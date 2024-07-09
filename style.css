@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto';
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 1);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+header .menu a {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+}
+
+header .barra-de-pesquisa {
+    position: relative;
+    display: flex;
+}
+
+header .barra-de-pesquisa input {
+    font-size: 15px;
+}
+
+header .barra-de-pesquisa .text {
+    width: 350px;
+    height: 40px;
+    padding: 20px;
+    border-color: rgba(204, 204, 204, 1);
+    border-style: solid;
+}
+
+header .barra-de-pesquisa .search-button {
+    display: flex;
+}
+
+header .barra-de-pesquisa .search-button .button img {
+    height: 44px;
+}
+
+header .barra-de-pesquisa .search-button .lupa {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+header .profile .picture img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+header .icon {
+    margin: 0 10px;
+}
+
+.container {
+    height: 100vh;
+    padding-top: 50px;
+    display: grid;
+    grid: 1fr / 1fr 4fr;
+
+    grid-template-areas:
+        "sidebar main";
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 30px;
+}
+
+aside .links a {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+aside .links a .icon-link {
+    margin-right: 10px;
+    display: block;
+}
+
+aside .links a .text-link span {
+    font-weight: bold;
+}
+
+aside .links a:hover {
+    background-color: rgb(219, 218, 218);
+    border-radius: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(249,249,249);
+    display: grid;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "video1 video2 video3 video4"
+        "video5 video6 video7 video8"
+        "video9 video10 video11 video12";
+    gap: 10px;
+    padding: 20px;
+}
+
+main .item a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main .item .thumb {
+    width: 100%;
+}
+
+main .item .thumb img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+main .item .info-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+main .item .info-video .channel {
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+main .item .info-video .text {
+    width: 80%;
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .item .info-video .text .name-video {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+main .item .info-video .text .views span {
+    font-weight: 300;
+    font-size: 15px;
+    display: block;
+    justify-content: left;
+}
